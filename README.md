@@ -5,7 +5,9 @@ TP 3 DPBO
 Saya Muhammad Rangga Nur Praditha dengan Nim 2400297 mengerjakan Tugas Praktikum 3 dalam mata kuliah Desain Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak akan melakukan kecurangan seperti yang telah di spesifikasikan
 
 # Diagram
-
+<div style = "text-align: center;">
+  <img src = "Diagram Kosan Tp3.jpg">
+</div>
 
 # Desain Diagram dan Class
 

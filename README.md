@@ -33,36 +33,104 @@ Agregation dipakai pada beberapa class, yaitu: <br>
 
 ## Class
 1. Orang <br>
-Kelas dasar yang menyimpan atribut umum dari orang seperti NoKTP, Nama, Alamat, dan NoTelp. Kelas ini menjadi induk (Hierarchical Inheritance) untuk kelas Pemilik dan Penyewa <br>
-Serta Method Constructor untuk membuat objek Orang, Getter untuk mengambil nilai atribut, Setter untuk mengubah nilai atribut <br>
+Kelas dasar yang menyimpan atribut umum dari orang diantaranya: <br>
+- NoKTP (long): Nomor Ktp orang tersebut<br>
+- Nama (string): Nama orang tersebut <br>
+- Alamat (string): Alamat asal orang tersebut <br>
+- NoTelp (string): Nomor Telepon orang tersebut <br>
+Kelas ini menjadi induk (Hierarchical Inheritance) untuk kelas Pemilik dan Penyewa <br>
+Serta Method: <br>
+- Constructor untuk membuat objek Orang <br>
+- Getter untuk mengambil nilai atribut <br>
+- Setter untuk mengubah nilai atribut <br>
 2. Pemilik <br>
-Kelas turunan dari Orang (Hierarchical Inheritance) yang menambahkan atribut khusus pemilik kosan seperti KodePemilik, KodeKosan dengan agregation class Kosan, dan NoRekening <br>
-Serta Method Constructor untuk membuat objek Pemilik, Getter untuk mengambil nilai atribut, Setter untuk mengubah nilai atribut <br>
-3. Penyewa <br>
-Kelas turunan dari Orang (Hierarchical Inheritance) yang menambahkan atribut khusus penyewa kosan seperti KodeSewa, KodeKosan dependency dari Kosan, Kamar dengan agregation class Kamar, TanggalMasuk, JatuhTempo, dan StatusPembayaran <br>
-Serta Method Constructor untuk membuat objek Penyewa, Getter untuk mengambil nilai atribut, Setter untuk mengubah nilai atribut <br>
-4. Kosan <br>
-Kelas yang merepresentasikan data kosan, menyimpan atribut seperti KodeKosan, NamaKosan, AlamatKosan, JumlahKamar, ListKamar dengan composition dari class Kamar, dan ListFasilitasUmum dengan agregation dari class FasilitasUmum. Kelas ini memiliki Composition dengan Kamar dan Agregation dengan FasilitasUmum <br>
-Serta Method Constructor untuk membuat objek Kosan, Getter untuk mengambil nilai atribut, Setter untuk mengubah nilai atribut <br>
-5. Kamar <br>
-Kelas yang menyimpan data umum kamar, seperti KodeKamar, TipeKamar, LuasKamar, HargaKamar, StatusKamar (Kosong/Terisi), DeskripsiKamar, dan FasilitasKamar <br>
-Serta Method Constructor untuk membuat objek Kamar, Getter untuk mengambil nilai atribut, Setter untuk mengubah nilai atribut <br>
-6. KamarPremium <br>
-Kelas turunan (Inheritance) dari Kamar yang menambahkan atribut khusus kamar premium, yaitu TambahanHarga dan FasilitasKamarPremium <br>
-Serta Method Constructor untuk membuat objek KamarPremium, Getter untuk mengambil nilai atribut, Setter untuk mengubah nilai atribut <br>
-7. FasilitasUmum <br>
-Kelas yang menyimpan data fasilitas umum dari kosan, dengan atribut KodeFasilitasUmum dan NamaFasilitasUmum <br>
-Serta Method Constructor untuk membuat objek FasilitasUmum, Getter untuk mengambil nilai atribut, Setter untuk mengubah nilai atribut <br>
-8. Main <br>
+Kelas turunan dari Orang (Hierarchical Inheritance) yang menambahkan atribut khusus pemilik kosan diantaranya:
+- KodePemilik (string): Kode milik pemilik yang punya kosan <br>
+- KodeKosan (string): Kode kosan yang dimiliki oleh pemilik <br>
+- NoRekening (string): Nomor rekening yang dimilik pemilik<br>
+Serta Method: <br>
+- Constructor untuk membuat objek Pemilik <br>
+- Getter untuk mengambil nilai atribut <br>
+- Setter untuk mengubah nilai atribut <br>
+4. Penyewa <br>
+Kelas turunan dari Orang (Hierarchical Inheritance) yang menambahkan atribut khusus penyewa kosan diantarnya:
+- KodeSewa (string): Kode sewa dari penyewa <br>
+- KodeKosan (string): Kode kosan dari tempat kosan penyewa <br>
+- Kamar (string): Kode kamar dari tempat kamar penyewa <br>
+- TanggalMasuk (string): Tanggal awal masuk penyewa <br>
+- JatuhTempo (string): Tanggal jatuh tempo penyewa <br>
+- StatusPembayaran (string): Lunas atau belumnya pembayaran penyewa <br>
+Serta Method:
+- Constructor untuk membuat objek Penyewa <br>
+- Getter untuk mengambil nilai atribut <br>
+- Setter untuk mengubah nilai atribut <br>
+5. Kosan <br>
+Kelas yang merepresentasikan data kosan, menyimpan atribut diantaranya:
+- KodeKosan (string): Kode kosan untuk setiap kosan <br>
+- NamaKosan (string): Nama kosan untuk setiap kosan <br>
+- AlamatKosan (string): Alamat kosan untuk setiap kosan <br>
+- JumlahKamar (string): Jumlah kamar pada kosan tersebut <br>
+- ListKamar (string): List kamar yang ada pada kosan tersebut <br>
+- ListFasilitasUmum (string): List fasilitas umum yang ada pada kosan tersebut <br>
+Kelas ini memiliki Composition dengan Kamar dan Agregation dengan FasilitasUmum <br>
+Serta Method:
+- Constructor untuk membuat objek Kosan <br>
+- Getter untuk mengambil nilai atribut <br>
+- Setter untuk mengubah nilai atribut <br>
+6. Kamar <br>
+Kelas yang menyimpan data umum kamar diantaranya:
+- KodeKamar (string): Kode dari kamar tersebut<br>
+- TipeKamar (string): Tipe dari kamar tersebut<br>
+- LuasKamar (string): Luas dari kamar tersebut <br>
+- HargaKamar (int): Harga dari kamar tersebut <br>
+- StatusKamar (Kosong/Terisi) (string): Status dari kamar tersebut apakah terisi atau tidak <br>
+- DeskripsiKamar (string): Deskripsi dari kamar tersebut <br>
+- FasilitasKamar (string): Fasilitas dari kamar tersebut <br>
+Serta Method: <br>
+- Constructor untuk membuat objek Kamar <br>
+- Getter untuk mengambil nilai atribut <br>
+- Setter untuk mengubah nilai atribut <br>
+7. KamarPremium <br>
+Kelas turunan (Inheritance) dari Kamar yang menambahkan atribut khusus kamar premium diantaranya:
+- TambahanHarga (int): Tambahan harga untuk kamar premium<br>
+- FasilitasKamarPremium (String): Fasilitas tambahan untuk kamar premium <br>
+Serta Method: <br>
+- Constructor untuk membuat objek Kamar <br>
+- PremiumGetter untuk mengambil nilai atribut <br>
+- Setter untuk mengubah nilai atribut <br>
+8. FasilitasUmum <br>
+Kelas yang menyimpan data fasilitas umum dari kosan, dengan atribut diantaranya: <br>
+- KodeFasilitasUmum (string): Kode untuk fasilitas umum pada kosan <br>
+- NamaFasilitasUmum (string): Nama fasilitas umum pada kosan tersebut <br>
+Serta Method: <br>
+- Constructor untuk membuat objek FasilitasUmum <br>
+- Getter untuk mengambil nilai atribut <br>
+- Setter untuk mengubah nilai atribut <br>
+9. Main <br>
 Kelas yang digunakan sebagai program utama untuk membuat objek-objek dari semua kelas di atas, kemudian menampilkan data kosan, daftar kamar dan kamar premium, fasilitas umum, serta data pemilik dan penyewa serta menjalankan program <br>
 
 # Alur Program
 Alur program berjalan sebagai berikut: <br>
-1. Untuk data awal dibuat semua objek - objek yang di perlukan seperti data Orang, Pemilik, Penyewa, Kosan, Kamar, KamarPremium, FasilitasPremium sesuai dengan parameter yang ada
-2. Menambahkan data baru dengan array of object sama seperti data awal tetapi berbeda isi data saja
-3. Setelah menambahkan data baru, menampilkan seluruh data pada class sebelum dan sesudah ditambahkan
+1. Untuk data awal dibuat semua objek - objek yang di perlukan seperti data Orang, Pemilik, Penyewa, Kosan, Kamar, KamarPremium, FasilitasPremium sesuai dengan parameter yang ada <br>
+2. Menambahkan data baru dengan array of object sama seperti data awal tetapi berbeda isi data saja <br>
+3. Setelah menambahkan data baru, menampilkan seluruh data pada class sebelum dan sesudah ditambahkan <br>
 
 # Dokumentasi
+Untuk dokumentasi antara CPP, Python, dan Java memiliki hasil yang sama
 ## CPP
+<div>
+  <img src = "CPP/Dokumentasi/CPP1.png" style= "width: 49%;">
+  <img src = "CPP/Dokumentasi/CPP2.png" style= "width: 49%;">
+</div>
+
 ## Python
+<div>
+  <img src = "Python/Dokumentasi/Python1.png" style= "width: 49%;">
+  <img src = "Python/Dokumentasi/Python2.png" style= "width: 49%;">
+</div>
+
 ## Java
+<div>
+  <img src = "Java/Dokumentasi/Java1.png" style= "width: 49%;">
+  <img src = "Java/Dokumentasi/Java2.png" style= "width: 49%;">
+</div>

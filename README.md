@@ -6,7 +6,7 @@ Saya Muhammad Rangga Nur Praditha dengan Nim 2400297 mengerjakan Tugas Praktikum
 
 # Diagram
 <div style = "text-align: center;">
-  <img src = "DiagramKosanTp3.jpg">
+  <img src = "DiagramKosanTP3.jpg">
 </div>
 
 # Desain Diagram dan Class
